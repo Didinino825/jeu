@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu de Tir à la Cible</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Jeu de Tir à la Cible</h1>
+    <div id="game-container">
+        <div id="target"></div>
+    </div>
+    <p>Score : <span id="score">0</span> | Niveau : <span id="level">1</span> | Prestige : <span id="prestige">0</span></p>
+
+    <!-- Formulaire pour donner un niveau et un prestige, visible uniquement pour les administrateurs ou le créateur -->
+    <div id="admin-controls" style="display: none;">
+        <label for="new-level">Donner un niveau :</label>
+        <input type="number" id="new-level" min="1" max="2550">
+        <button onclick="setLevel()">Définir le Niveau</button>
+        
+        <label for="new-prestige">Donner un prestige :</label>
+        <input type="number" id="new-prestige" min="0">
+        <button onclick="addPrestige()">Ajouter Prestige</button>
+    </div>
+
+    <!-- Section pour le classement -->
+    <h2>Classement</h2>
+    <ol id="ranking-list"></ol>
+
+    <script src="script.js"></script>
+</body>
+</html>
